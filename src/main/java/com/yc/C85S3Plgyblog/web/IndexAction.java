@@ -16,7 +16,7 @@ public class IndexAction {
 	@Resource
 	private ArticleMapper amapper;
 	
-	@GetMapping("/")
+	@GetMapping({"/","/index.html"})
        public String index(Model m,@RequestParam(defaultValue = "1")int page) {
 		PageHelper.startPage(page, 5);
 		m.addAttribute("alist",amapper.selectByNew());

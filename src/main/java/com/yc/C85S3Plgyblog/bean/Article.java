@@ -3,7 +3,11 @@ package com.yc.C85S3Plgyblog.bean;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 
-public class Article {
+public class Article implements java.io.Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String id;
     private String author;
     @NotEmpty
@@ -21,6 +25,18 @@ public class Article {
     private String createtime;
     private String readcnt;
     private String agreecnt;
+    
+    private Category category;
+
+	public Category getCategory() {
+		return category;
+	}
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+
+    
+    
 	public String getId() {
 		return id;
 	}

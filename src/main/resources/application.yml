@@ -12,3 +12,10 @@ spring:
 mybatis:
   configuration:
     map-underscore-to-camel-case: true 
+
+    
+logging:
+   level:
+      com:
+         yc:
+            C85S3Plgyblog: debug 
